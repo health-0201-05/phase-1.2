@@ -22,4 +22,4 @@ function openTab(evt, tabName) {
     // show tab that user clicked on, make that tab active
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
-  }
+}
