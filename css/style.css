@@ -5,6 +5,7 @@
 }
 
 body {
+    background-color: pink;
     font-family: Arial, sans-serif;
 }
 
@@ -16,10 +17,10 @@ body {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-  }
+}
   
   /* style tab buttons */
-  .tab button {
+.tab button {
     background-color: inherit;
     float: left;
     border: none;
@@ -27,22 +28,22 @@ body {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-  }
+}
   
   /* change color of tab buttons on hover */
-  .tab button:hover {
+.tab button:hover {
     background-color: #ddd;
-  }
+}
   
   /* active tab class*/
-  .tab button.active {
+.tab button.active {
     background-color: #ccc;
-  }
+}
   
   /* style content of actual page that tab takes you to */
-  .tabcontent {
+.tabcontent {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
-  }
+}
