@@ -1,31 +1,32 @@
 window.onload = function main() {
-  // append close buttons to all list items
+  // add delete buttons to default list items
   var nodeList = document.getElementsByTagName("li");
   var i;
-  for (i = 0; i < myNodelist.length; i++) {
-    var span = document.createElement("SPAN");
+  for (i = 0; i < nodeList.length; i++) {
+    var delBtn = document.createElement("SPAN");
     var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    nodeList[i].appendChild(span);
+    delBtn.className = "del"; // DELETE BUTTON CLASS NAME
+    delBtn.appendChild(txt);
+    nodeList[i].appendChild(delBtn);
   }
 
-  // Click on a close button to hide the current list item
-  var close = document.getElementsByClassName("close");
+  console.log(nodeList);
+  // add "delete" onclick event to delete buttons
+  var deletes = document.getElementsByClassName("del");
   var i;
-  for (i = 0; i < close.length; i++) {
-    deleteItem(close[i]);
+  for (i = 0; i < deletes.length; i++) {
+    deleteItem(deletes[i]);
   }
 
-  // Add a "checked" symbol when clicking on a list item
+  // add "checked off" onclick event to all list items
   var list = document.getElementsByTagName('li');
-  console.log(list[0])
+ // console.log(list[0])
   for(i = 0; i < list.length; i++){
     checkItem(list[i]);
   }
 }
 
-// what to do if list item is clicked on
+// toggle "checked" class on list items when clicked
 function checkItem(listItem){
   listItem.addEventListener('click', function(ev) {
     var item = ev.currentTarget;
@@ -38,32 +39,40 @@ function checkItem(listItem){
   }, false);
 }
 
-function deleteItem(item){
-  console.log(item)
-  item.onclick = function() {
+// hide deleted item from view
+function deleteItem(delBtn){
+  //remove list item from list??
+ // console.log(delBtn)
+  delBtn.onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
   }
 }
 
-// Create a new list item when clicking on the "Add" button
+// create and add new to-do list item when "Add" button is clicked
 function newElement() {
   var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
+  // get name of list item
+  var inputValue = document.getElementById("input").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
-  // add click event listener for checking off items
+
+  // add onclick event listener to the new item
   checkItem(li);
+
   if (inputValue === '') {
     alert("You must write something!");
   } else {
-    document.getElementById("myUL").appendChild(li);
+    document.getElementById("tdList").appendChild(li);
   }
-  document.getElementById("myInput").value = "";
 
+  // reset text input
+  document.getElementById("input").value = "";
+
+  // add delete button to the new item
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
-  span.className = "close";
+  span.className = "del";
   span.appendChild(txt);
   li.appendChild(span);
   deleteItem(span);

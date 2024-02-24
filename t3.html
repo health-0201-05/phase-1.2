@@ -9,14 +9,15 @@
 </head>
 
 <body>
-    <div id="myDIV" class="header">
-        <h2>My To Do List</h2>
-        <input type="text" id="myInput" placeholder="New entry...">
+    <div id="pagehead" class="header">
+        <h2>To Do</h2>
+        <input type="text" id="input" placeholder="New entry...">
         <span onclick="newElement()" class="addBtn">Add</span>
     </div>
       
-    <ul id="myUL">
-        <li>Register for classes</li>
+    <ul id="tdList">
+        <!-- default list -->
+        <li class="checked">Register for classes</li>
         <li class="checked">Pay tuition and fees</li>
         <li>Do Phase 1</li>
         <li>Do Phase 2</li>
