@@ -2,23 +2,24 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript loaded!');
 });
 
+// opens the tab that user clicks on
 function openTab(evt, tabName) {
-    // Declare all variables
+    // declare variables
     var i, tabcontent, tablinks;
   
-    // Get all elements with class="tabcontent" and hide them
+    // hide all tab pages
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }
   
-    // Get all elements with class="tablinks" and remove the class "active"
+    // make all tabs inactive
     tablinks = document.getElementsByClassName("tabs");
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
   
-    // Show the current tab, and add an "active" class to the button that opened the tab
+    // show tab that user clicked on, make that tab active
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
   }
