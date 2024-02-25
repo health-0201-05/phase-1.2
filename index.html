@@ -8,7 +8,6 @@
     <script src="js/script.js"></script>
 </head>
 <body>
-    <!--  adopted from w3schools https://www.w3schools.com/howto/howto_js_tabs.asp -->
     <div class="tab">
         <button class="tabs" onclick="openTab(event, 'text')">Text</button>
         <button class="tabs" onclick="openTab(event, 'choices')">Choices</button>
@@ -18,90 +17,117 @@
         <button class="tabs" onclick="openTab(event, 'lowerright')">Lower Right</button>
     </div>
       
-      <div id="text" class="tabcontent">
-        <h3>Text</h3>
+    <div id="text" class="tabcontent">
+      <h3>Text</h3>
 
-        <div id="content">
-          <p>
-            Hello There! <br><br><br><br><br>
-            Hello There! <br><br><br><br><br>
-            Hello There! <br><br><br><br><br>
-            Hello There! <br><br><br><br><br>
-            Hello There! <br><br><br><br><br>
-            Hello There! <br><br><br><br><br>
-            Hello There! <br><br><br><br><br>
-            Hello There! <br><br><br><br><br>
-            Hello There! <br><br><br><br><br>
-            Hello There! <br><br><br><br><br>
-            Hello There! <br><br><br><br><br>
-          </p>
-        </div>
+      <div id="content">
+        <p>
+          This is going to be too much text to show... <br><br><br><br><br>
+          This is going to be too much text to show... <br><br><br><br><br>
+          This is going to be too much text to show... <br><br><br><br><br>
+          This is going to be too much text to show... <br><br><br><br><br>
+          This is going to be too much text to show... <br><br><br><br><br>
+          This is going to be too much text to show... <br><br><br><br><br>
+          This is going to be too much text to show... <br><br><br><br><br>
+          This is going to be too much text to show... <br><br><br><br><br>
+          This is going to be too much text to show... <br><br><br><br><br>
+          This is going to be too much text to show... <br><br><br><br><br>
+          This is going to be too much text to show... <br><br><br><br><br>
+          This is going to be too much text to show... <br><br><br><br><br>
+          This is going to be too much text to show... <br><br><br><br><br>
+        </p>
       </div>
+    </div>
       
-      <div id="choices" class="tabcontent">
-        <!-- Choices content here-->
-        <h3>Choices</h3>
-      </div>
-      
-      <div id="todo" class="tabcontent">
-        <!-- ToDo content here-->
-        <script src = "js/t3.js"></script>
-
-        <div id="pagehead" class="header">
-            <h2>To Do</h2>
-            <input type="text" id="input" placeholder="New entry...">
-            <span onclick="newElement()" class="addBtn">Add</span>
-        </div>
-      
-        <ul id="tdList">
-            <!-- default list -->
-            <li class="checked">Register for classes</li>
-            <li class="checked">Pay tuition and fees</li>
-            <li>Do Phase 1</li>
-            <li>Do Phase 2</li>
-            <li>Do Phase 3</li>
-            <li>Do Phase 4</li>
-        </ul>
-      </div>
-
-      <div id="profile" class="tabcontent">
-        <!-- Profile content here-->
-        <h3>Profile</h3>
-      </div>
-      
-      <div id="colors" class="tabcontent">
-        <!-- Colors content here-->
-        <style>
-            p {text-align: center;}
-            #kenobi { 
-                background-color: black;
-                color: yellow;
-                margin-bottom: 0;
-                padding-bottom: 0;
-            }
-            #forgor {
-                padding-top: 0;
-                margin-top: 0;
-                background-color: yellow;
-                color: purple;
-            }
-        </style>
-        <!-- disclaimer: i am not very proficient at front end at all -->
-        <h1>Colors</h1>
+    <div id="choices" class="tabcontent">
+      <!-- Choices content here-->
+      <h3>Choices</h3>
+      <form id="choicesForm">
+        <label>Hat color to place on Player One's head:</label><br>
+        <input type="radio" id="playerOneRed" name="playerOneHat" value="Red">
+        <label for="playerOneRed">Red</label><br>
+        <input type="radio" id="playerOneBlue" name="playerOneHat" value="Blue">
+        <label for="playerOneBlue">Blue</label><br>
     
-        <div class="t5">
-            <p id="kenobi">Hello There</p>
-            <p id="forgor">Hi Again</p>
+        <label for="playerTwoHat">Hat color to place on Player Two's head:</label><br>
+        <select id="playerTwoHat" name="playerTwoHat">
+          <option value="Red">Red</option>
+          <option value="Blue">Blue</option>
+        </select><br>
     
-        </div>
-        <a src="routes/t5.html">task 5 here</a>
-      </div>
-      
-      <div id="lowerright" class="tabcontent">
-        <!-- Lower Right content here-->
-        <h3>Lower Right</h3>
-      </div>
+        <button type="button" onclick="makeGuess()">Have Computer Players Make Guesses</button>
+        <div class="result" id="resultText"></div>
+      </form>
 
+      <script>
+        function makeGuess() {
+          var playerOneHat = document.querySelector('input[name="playerOneHat"]:checked')?.value;
+          var playerTwoHat = document.getElementById('playerTwoHat').value;
+          var resultText = 'Player One chose ' + (playerOneHat || 'no color') + ' and Player Two chose ' + playerTwoHat + '.';
+          document.getElementById('resultText').innerText = resultText;
+        }
+        </script>
+    </div>
     
+    <div id="todo" class="tabcontent">
+      <!-- ToDo content here-->
+      <script src = "js/t3.js"></script>
+
+      <div id="pagehead" class="header">
+          <h2>To Do</h2>
+          <input type="text" id="input" placeholder="New entry...">
+          <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+    
+      <ul id="tdList">
+          <!-- default list -->
+          <li class="checked">Register for classes</li>
+          <li class="checked">Pay tuition and fees</li>
+          <li>Do Phase 1</li>
+          <li>Do Phase 2</li>
+          <li>Do Phase 3</li>
+          <li>Do Phase 4</li>
+      </ul>
+    </div>
+
+    <div id="profile" class="tabcontent">
+      <!-- Profile content here-->
+      <h3>Profile</h3>
+    </div>
+    
+    <div id="colors" class="tabcontent">
+      <!-- Colors content here-->
+      <style>
+          p {text-align: center;}
+          #kenobi { 
+              background-color: black;
+              color: yellow;
+              margin-bottom: 0;
+              padding-bottom: 0;
+              font-weight: bold;
+              font-size: 20px;
+          }
+          #forgor {
+              padding-top: 0;
+              margin-top: 0;
+              background-color: yellow;
+              color: purple;
+              font-weight: bold;
+              font-size: 20px;
+          }
+      </style>
+      <h1>Colors</h1>
+  
+      <div class="t5">
+          <p id="kenobi">Hello There</p>
+          <p id="forgor">Hi Again</p>
+      </div>
+    </div>
+    
+    <div id="lowerright" class="tabcontent">
+      <!-- Lower Right content here-->
+      <h3>Lower Right</h3>
+    </div>
+
 </body>
 </html>
