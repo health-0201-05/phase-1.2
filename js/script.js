@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript loaded!');
+
+    // open text tab first by default
+    var item = document.getElementById('defaultOpen');
+    item.click();
 });
 
 // opens the tab that user clicks on

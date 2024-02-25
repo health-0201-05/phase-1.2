@@ -40,7 +40,7 @@ function checkItem(listItem){
 
 // hide deleted item from view
 function deleteItem(delBtn){
-  console.log(delBtn)
+  //console.log(delBtn)
   var items = Array.from(document.getElementsByTagName('li'));
   delBtn.onclick = function() {
     var div = this.parentElement;
