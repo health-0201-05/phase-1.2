@@ -8,7 +8,7 @@
     <script src="js/script.js"></script>
 </head>
 <body>
-    <!--  code sample from w3schools https://www.w3schools.com/howto/howto_js_tabs.asp -->
+    <!--  adopted from w3schools https://www.w3schools.com/howto/howto_js_tabs.asp -->
     <div class="tab">
         <button class="tabs" onclick="openTab(event, 'text')">Text</button>
         <button class="tabs" onclick="openTab(event, 'choices')">Choices</button>
@@ -30,7 +30,23 @@
       
       <div id="todo" class="tabcontent">
         <!-- ToDo content here-->
-        <h3>To Do</h3>
+        <script src = "js/t3.js"></script>
+
+        <div id="pagehead" class="header">
+            <h2>To Do</h2>
+            <input type="text" id="input" placeholder="New entry...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+      
+        <ul id="tdList">
+            <!-- default list -->
+            <li class="checked">Register for classes</li>
+            <li class="checked">Pay tuition and fees</li>
+            <li>Do Phase 1</li>
+            <li>Do Phase 2</li>
+            <li>Do Phase 3</li>
+            <li>Do Phase 4</li>
+        </ul>
       </div>
 
       <div id="profile" class="tabcontent">
