@@ -1,3 +1,4 @@
+/* adopted from w3schools https://www.w3schools.com/howto/howto_js_todolist.asp */
 window.onload = function main() {
   // add delete buttons to default list items
   var nodeList = document.getElementsByTagName("li");
@@ -10,7 +11,6 @@ window.onload = function main() {
     nodeList[i].appendChild(delBtn);
   }
 
-  console.log(nodeList);
   // add "delete" onclick event to delete buttons
   var deletes = document.getElementsByClassName("del");
   var i;
@@ -20,7 +20,6 @@ window.onload = function main() {
 
   // add "checked off" onclick event to all list items
   var list = document.getElementsByTagName('li');
- // console.log(list[0])
   for(i = 0; i < list.length; i++){
     checkItem(list[i]);
   }
@@ -41,8 +40,8 @@ function checkItem(listItem){
 
 // hide deleted item from view
 function deleteItem(delBtn){
-  //remove list item from list??
- // console.log(delBtn)
+  console.log(delBtn)
+  var items = Array.from(document.getElementsByTagName('li'));
   delBtn.onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
