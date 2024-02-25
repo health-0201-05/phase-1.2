@@ -13,6 +13,7 @@ body {
     text-align: center;
 }
 
+/*code sample from w3schools https://www.w3schools.com/howto/howto_js_tabs.asp*/
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;

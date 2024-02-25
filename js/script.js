@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // opens the tab that user clicks on
+// based on w3schools tutorial https://www.w3schools.com/howto/howto_js_tabs.asp
 function openTab(evt, tabName) {
     // declare variables
     var i, tabcontent, tablinks;
