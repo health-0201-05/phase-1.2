@@ -18,7 +18,7 @@
     </div>
       
     <div id="text" class="tabcontent">
-      <h3>Text</h3>
+      <h1>Text</h1>
 
       <div id="content">
         <p>
@@ -40,20 +40,19 @@
     </div>
       
     <div id="choices" class="tabcontent">
-      <!-- Choices content here-->
-      <h3>Choices</h3>
+      <h1>Choices</h1>
       <form id="choicesForm">
         <label>Hat color to place on Player One's head:</label><br>
         <input type="radio" id="playerOneRed" name="playerOneHat" value="Red">
         <label for="playerOneRed">Red</label><br>
         <input type="radio" id="playerOneBlue" name="playerOneHat" value="Blue">
-        <label for="playerOneBlue">Blue</label><br>
+        <label for="playerOneBlue">Blue</label><br><br>
     
         <label for="playerTwoHat">Hat color to place on Player Two's head:</label><br>
         <select id="playerTwoHat" name="playerTwoHat">
           <option value="Red">Red</option>
           <option value="Blue">Blue</option>
-        </select><br>
+        </select><br><br>
     
         <button type="button" onclick="makeGuess()">Have Computer Players Make Guesses</button>
         <div class="result" id="resultText"></div>
@@ -70,11 +69,9 @@
     </div>
     
     <div id="todo" class="tabcontent">
-      <!-- ToDo content here-->
-      <script src = "js/t3.js"></script>
+      <h1>To Do</h1>
 
       <div id="pagehead" class="header">
-          <h2>To Do</h2>
           <input type="text" id="input" placeholder="New entry...">
           <span onclick="newElement()" class="addBtn">Add</span>
       </div>
@@ -88,15 +85,16 @@
           <li>Do Phase 3</li>
           <li>Do Phase 4</li>
       </ul>
+
+      <script src = "js/t3.js"></script>
     </div>
 
     <div id="profile" class="tabcontent">
       <!-- Profile content here-->
-      <h3>Profile</h3>
+      <h1>Profile</h1>
     </div>
     
     <div id="colors" class="tabcontent">
-      <!-- Colors content here-->
       <style>
           p {text-align: center;}
           #kenobi { 
@@ -125,8 +123,10 @@
     </div>
     
     <div id="lowerright" class="tabcontent">
-      <!-- Lower Right content here-->
-      <h3>Lower Right</h3>
+      <h1>Lower Right</h1>
+      <div style="position: fixed; bottom: 0; right: 0; margin: 10px;">
+        <p style="text-align: right; margin: 0; font-size: 24px;">Down Here</p>
+      </div>
     </div>
 
 </body>
