@@ -1,12 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     background-color: pink;
     font-family: Arial, sans-serif;
+}
+
+#content {
+  overflow-y: scroll;
+  box-sizing: border-box;
+  text-align: left;
 }
 
 .t5 {
