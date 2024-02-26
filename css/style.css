@@ -147,3 +147,67 @@ ul li.checked::before {
 .addBtn:hover {
   background-color: #bbb;
 }
+
+/* Make all buttons transparent
+Move into custom classes if this conflicts
+after merging tabs*/
+button {
+    border: none;
+    background-color: inherit;
+}
+
+/* General center styling used to test positioning
+Only used by profile image to fit and center in button */
+.center {
+    display: block;
+    width: 100%;
+}
+
+/* Styling for Username below profile pic*/
+.profile-name {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style and alignment for profile pic
+button container*/
+.profile-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1cm;
+    width: 50%;
+}
+
+/*Styling for popup. Initially wanted to use
+visibility to control it but switched to
+display instead*/
+.popup {
+    visibility: inherit;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 100px;
+    font-size:20px;
+    background-color: white;
+}
+
+/*The exit button for the popup is currently
+just the letter X*/
+.popup-exit-button {
+    margin-left:20px;
+    font-weight:bold;
+    font-size:30px;
+}
+
+/*This controls the visibility of the popup
+It is initially hidden*/
+.popup-div {
+    display: none;
+}
