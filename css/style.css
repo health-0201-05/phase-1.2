@@ -2,13 +2,22 @@ body {
     background-color: pink;
 }
 
+h1 {
+  padding-top: 32px;
+}
+
 .t5 {
     text-align: center;
 }
 
 /* adopted from w3schools https://www.w3schools.com/howto/howto_js_tabs.asp */
 .tab {
-    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
 }
@@ -210,4 +219,10 @@ just the letter X*/
 It is initially hidden*/
 .popup-div {
     display: none;
+}
+
+#guess {
+  background-color: white;
+  color: black;
+  padding: 10px 24px;
 }

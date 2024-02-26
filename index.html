@@ -54,7 +54,7 @@
           <option value="Blue">Blue</option>
         </select><br><br>
     
-        <button type="button" onclick="makeGuess()">Have Computer Players Make Guesses</button>
+        <button id="guess" type="button" onclick="makeGuess()">Have Computer Players Make Guesses</button>
         <div class="result" id="resultText"></div>
       </form>
 
@@ -65,7 +65,7 @@
           var resultText = 'Player One chose ' + (playerOneHat || 'no color') + ' and Player Two chose ' + playerTwoHat + '.';
           document.getElementById('resultText').innerText = resultText;
         }
-        </script>
+      </script>
     </div>
     
     <div id="todo" class="tabcontent">
