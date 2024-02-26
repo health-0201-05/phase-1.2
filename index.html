@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phase 1.2</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
 </head>
+
 <body>
     <div class="tab">
         <button class="tabs" id="defaultOpen" onclick="openTab(event, 'text')">Text</button>
@@ -85,8 +85,6 @@
           <li>Do Phase 3</li>
           <li>Do Phase 4</li>
       </ul>
-
-      <script src="js/t3.js"></script>
     </div>
 
     <div id="profile" class="tabcontent">
@@ -111,43 +109,24 @@
                 </p>
             </span>
         </div>
-        <script src="js/t4.js"></script>
     </div>
     
     <div id="colors" class="tabcontent">
-      <style>
-          p {text-align: center;}
-          #kenobi { 
-              background-color: black;
-              color: yellow;
-              margin-bottom: 0;
-              padding-bottom: 0;
-              font-weight: bold;
-              font-size: 20px;
-          }
-          #forgor {
-              padding-top: 0;
-              margin-top: 0;
-              background-color: yellow;
-              color: purple;
-              font-weight: bold;
-              font-size: 20px;
-          }
-      </style>
       <h1>Colors</h1>
   
       <div class="t5">
-          <p id="kenobi">Hello There</p>
-          <p id="forgor">Hi Again</p>
+          <p id="yellow">Hello There</p>
+          <p id="purple">Hi Again</p>
       </div>
     </div>
     
     <div id="lowerright" class="tabcontent">
       <h1>Lower Right</h1>
-      <div style="position: fixed; bottom: 0; right: 0; margin: 10px;">
-        <p style="text-align: right; margin: 0; font-size: 24px;">Down Here</p>
+      <div id="top">
+        <p id="bottom">Down Here</p>
       </div>
     </div>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
